@@ -1,47 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Results Summary Component, @frontendmentor, front-end mentor">
+    <meta name="keywords" content="results, summary, component, zh4r, front-end, @frontendmentor, mentor">
+    <meta name="author" content="Plamen 'zh4r' Vachkoff">
+    <meta property="og:description" content="Resulst summary component challenge solution @frontendmentor/zh4r">
+    <meta property="og:image" content="./path/to/img.png">
+    <meta property="og:title" content="Results Summary Component | Frontend Mentor">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/icon-memory.svg">
+    <title>Results Summary Component | zh4r | Frontend Mentor</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Results summary component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+    
+    <header>
+        <h1>Your Result</h1>
+        <h2>76</h2>
+        <h3>of 100</h3>
 
-  Your Result
-  76
-  of 100
+        <h4>Great</h4>
+        <p>You scored higher than 65% of the people who have taken these tests.</p>
+    </header>
+    <main>
+        <table id="data">
+            <thead>Summary</thead>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+        </table>
 
-  Reaction
-  80 / 100
+        <button>Continue</button>
+    </main>
+    <footer>
+        <!-- <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+    </div>-->
 
-  Memory
-  92 / 100
+    </footer>
+<script type="text/javascript">
+        var data = 
+        [
+            {
+                "category": "Reaction",
+                "score": 80,
+                "icon": "./assets/images/icon-reaction.svg"
+            },
+            {
+                "category": "Memory",
+                "score": 92,
+                "icon": "./assets/images/icon-memory.svg"
+            },
+            {
+                "category": "Verbal",
+                "score": 61,
+                "icon": "./assets/images/icon-verbal.svg"
+            },
+            {
+                "category": "Visual",
+                "score": 72,
+                "icon": "./assets/images/icon-visual.svg"
+            }
+        ]
+        // console.log(data[0].category)
 
-  Verbal
-  61 / 100
+        var output = '';
+        for (let i = 0; i < data.length; i++) {
+            // console.log(data[i].category);
+            output += 
+            '<tr>'
+            +'<td>'
+            +'<img src="'
+            +data[i].icon+'">'
+            +'<td>'
+            +data[i].category+'</td>'
+            +'<td>'
+            +data[i].score+'</td>'
+            +'</tr>';
+        }
+        document.getElementById('data').innerHTML = output;
+    </script>
+    </body>
 
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
 </html>
