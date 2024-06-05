@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,15 +16,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="assets/images/icon-memory.svg">
     <title>Results Summary Component | zh4r | Frontend Mentor</title>
-
 </head>
-
 <body>
-    
     <header>
         <h1>Your Result</h1>
-        <h2>76</h2>
-        <h3>of 100</h3>
+
+        <div class="scored">
+            <h2>76</h2>
+            <h3>of 100</h3>
+        </div>
 
         <h4>Great</h4>
         <p>You scored higher than 65% of the people who have taken these tests.</p>
@@ -45,7 +44,7 @@
     </div>-->
 
     </footer>
-<script type="text/javascript">
+    <script type="text/javascript">
         var data = 
         [
             {
@@ -75,7 +74,7 @@
         for (let i = 0; i < data.length; i++) {
             // console.log(data[i].category);
             output += 
-            '<tr>'
+            '<tr class="fadeIn">'
             +'<td>'
             +'<img src="'
             +data[i].icon+'">'

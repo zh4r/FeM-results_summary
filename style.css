@@ -21,6 +21,9 @@ NEUTRAL
 html {
     font-family: 'Hanken Grotesk';
     font-size: 18px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -30,3 +33,51 @@ body {
     max-height: 810px;
 }
 
+header {
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+h1 {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.658);
+}
+
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    padding: 0 .5rem 1rem .5rem;
+    font-size: .9rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.575);
+}
+
+.scored {
+    margin: auto auto;
+    /* padding: .4rem; */
+    width: 50%;
+    /* height: 50%; */
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+}
+
+@keyframes rowFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: rowFadeIn;
+    animation-duration: 1s;
+}
