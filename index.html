@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,25 +18,29 @@
     <link rel="icon" type="image/svg+xml" href="assets/images/icon-memory.svg">
     <title>Results Summary Component | zh4r | Frontend Mentor</title>
 </head>
+
 <body>
     <header>
         <h1>Your Result</h1>
-
         <div class="scored">
             <h2>76</h2>
             <h3>of 100</h3>
         </div>
-
         <h4>Great</h4>
         <p>You scored higher than 65% of the people who have taken these tests.</p>
     </header>
     <main>
-        <table id="data">
-            <thead>Summary</thead>
-
+        <table>
+            <thead>
+                <tr>
+                    <th>Summary</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+            </tbody>
         </table>
 
-        <button>Continue</button>
+        <button type="button">Continue</button>
     </main>
     <footer>
         <!-- <div class="attribution">
@@ -45,47 +50,61 @@
 
     </footer>
     <script type="text/javascript">
-        var data = 
-        [
-            {
-                "category": "Reaction",
-                "score": 80,
-                "icon": "./assets/images/icon-reaction.svg"
-            },
-            {
-                "category": "Memory",
-                "score": 92,
-                "icon": "./assets/images/icon-memory.svg"
-            },
-            {
-                "category": "Verbal",
-                "score": 61,
-                "icon": "./assets/images/icon-verbal.svg"
-            },
-            {
-                "category": "Visual",
-                "score": 72,
-                "icon": "./assets/images/icon-visual.svg"
-            }
-        ]
+        var data =
+            [
+                {
+                    "category": "Reaction",
+                    "class": "Reaction",
+                    "score": 80,
+                    "outOf": 100,
+                    "icon": "./assets/images/icon-reaction.svg"
+                },
+                {
+                    "category": "Memory",
+                    "class": "Memory",
+                    "score": 92,
+                    "outOf": 100,
+                    "icon": "./assets/images/icon-memory.svg"
+                },
+                {
+                    "category": "Verbal",
+                    "class": "Verbal",
+                    "score": 61,
+                    "outOf": 100,
+                    "icon": "./assets/images/icon-verbal.svg"
+                },
+                {
+                    "category": "Visual",
+                    "class": "Visual",
+                    "score": 72,
+                    "outOf": 100,
+                    "icon": "./assets/images/icon-visual.svg"
+                }
+            ]
         // console.log(data[0].category)
 
         var output = '';
         for (let i = 0; i < data.length; i++) {
             // console.log(data[i].category);
-            output += 
-            '<tr class="fadeIn">'
-            +'<td>'
-            +'<img src="'
-            +data[i].icon+'">'
-            +'<td>'
-            +data[i].category+'</td>'
-            +'<td>'
-            +data[i].score+'</td>'
-            +'</tr>';
+            output +=
+                '<tr class="'
+                + data[i].class +
+                '">'
+                + '<td class="fadeIn1 ico">'
+                + '<img src="'
+                + data[i].icon + '">'
+                + '</td>'
+                + '<td class="fadeIn2 cat">'
+                + data[i].category + '</td>'
+                + '<td class="fadeIn3 sco">'
+                + data[i].score + '</td>'
+                + '<td class="fadeIn3 outOf">/ '
+                + data[i].outOf + '</td>'
+                + '</tr>';
         }
         document.getElementById('data').innerHTML = output;
+
     </script>
-    </body>
+</body>
 
 </html>
