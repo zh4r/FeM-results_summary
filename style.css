@@ -24,14 +24,17 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    display: grid;
+    min-height: 100vh;
+    place-items: start center;
+
 }
 
 body {
-
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     max-width: 375px;
-    max-height: 810px;
+    max-height: 800px;
 }
 
 header {
@@ -40,6 +43,7 @@ header {
     text-align: center;
     border-bottom-left-radius: 1.8rem;
     border-bottom-right-radius: 1.8rem;
+    transition: all 333ms ease-in-out;
 }
 
 h1 {
@@ -49,12 +53,7 @@ h1 {
     color: rgba(255, 255, 255, 0.658);
 }
 
-.scored {
-    margin: auto auto;
-    width: 37%;
-    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
-    border-radius: 50%;
-}
+
 
 h2 {
     font-size: 3rem;
@@ -110,6 +109,23 @@ td {
     padding: .95rem 0;
 }
 
+.scored {
+    margin: auto auto;
+    width: 37%;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    transition: all 500ms ease-in-out;
+}
+
+header:hover {
+    box-shadow: .1rem .2rem .8rem rgba(0, 0, 0, 0.26);
+    text-shadow: .1rem .1rem .4rem rgba(126, 126, 126, 0.2);
+}
+
+.scored:hover {
+    text-shadow: .1rem .1rem .4rem rgba(126, 126, 126, 0.2);
+    box-shadow: .1rem .2rem .8rem rgba(0, 0, 0, 0.26);
+}
 
 .Reaction {
     background-color: hsla(0, 100%, 67%, 0.082);
@@ -166,7 +182,7 @@ button {
     font-weight: 500;
     text-align: center;
     background-color: hsl(224, 30%, 27%);
-    padding: 1rem;
+    padding: .9rem;
     color: aliceblue;
     border-radius: 2rem;
     border: 0;
@@ -200,8 +216,6 @@ button:hover {
 #data tr:hover {
     text-shadow: .1rem .1rem .4rem rgba(126, 126, 126, 0.2);
     box-shadow: .1rem .2rem .8rem rgba(0, 0, 0, 0.26);
-    ;
-
 }
 
 @keyframes rowFadeIn {
@@ -231,26 +245,32 @@ button:hover {
 
 @media (min-width: 1000px) {
     html {
+        place-items: center;
         font-size: 20px;
     }
 
     body {
-        max-width: 75vw;
+        max-width: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    header {
+    header, main {
+        display: inline-block;
+        margin: 0;
         width: 365px;
-        display: inline-block;
+        height: 53vh;
         border-radius: 1.8rem;
-
+        vertical-align: middle;
     }
 
-    main {
-        width: 375px;
-        display: inline-block;
+    th {
+        font-size: 1.1rem;
     }
 
     .scored {
-        width: 44%;
+        width: 16vw;
+        height: 17vh;
     }
 }
