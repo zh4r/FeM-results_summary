@@ -29,8 +29,8 @@ Users should be able to:
 ### Screenshot
 
 #### Mobile & Desktop
-<img src="./design/mobile_fin.png" style="width: 30%; height:30%; margin-left: 50px;">
-<img src="./design/desktop_fin.png" style="width: 45%; position: absolute; right:100px">
+<img src="./design/mobile_fin.png" style="width: 25%; height:30%;">
+<img src="./design/desktop_fin.png" style="width: 45%;">
 
 
 ### Links
