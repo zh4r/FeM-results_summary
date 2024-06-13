@@ -25,7 +25,6 @@ html {
     margin: 0;
     padding: 0;
     display: grid;
-    min-height: 100vh;
     place-items: start center;
 }
 
@@ -34,6 +33,8 @@ body {
     padding: 0;
     max-width: 375px;
     max-height: 800px;
+    position: relative;
+    min-height: 100vh;
 }
 
 
@@ -137,7 +138,7 @@ footer {
     right: 0;
     bottom: 0;
     font-size: .7rem;
-    z-index: -1;
+    /* z-index: -1; */
 
     a {
         position: relative;
@@ -339,13 +340,16 @@ header:hover {
         font-size: 1.2rem;
         font-weight: 600;
     }
+
+    footer {
+        left: 365px;
+    }
 }
 
-@media (max-height: 805px) {
+@media (max-height: 805px) and (max-width: 900px) {
     footer {
         position: absolute;
         top: 0;
-        z-index: 1;
         color: aliceblue;
         font-size: .7rem;
         a {
