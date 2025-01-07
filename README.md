@@ -62,6 +62,7 @@ I want to:
 
 ## Author
 
-- Website - [zh4r @ GitHub Pages](https://zh4r.github.io/)
-- Frontend Mentor - [@zh4r](https://www.frontendmentor.io/profile/zh4r)
-- Freelancing - [Upwork](https://www.upwork.com/freelancers/~012011fab05dc8d091?mp_source=share)
+- [GitHub Pages - @zh4r](https://zh4r.github.io/)
+- [Frontend Mentor -  @zh4r](https://www.frontendmentor.io/profile/zh4r)
+- [Upwork](https://www.upwork.com/freelancers/~012011fab05dc8d091)
+- [Hire me - piv@zh4r.me](mailto:piv@zh4r.me)
